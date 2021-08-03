@@ -13,12 +13,16 @@ import Horror from "./components/pages/Horror"
 import Romance from "./components/pages/Romance"
 import TopRated from "./components/pages/TopRated"
 import Upcoming from "./components/pages/Upcoming"
+import NowPlaing from "./components/fetches/NowPlaying"
 
+console.log(process.env.REACT_APP_API_KEY)
 
 function App() {
   return (
+    
     <Router>
     <Navbar />
+    <NowPlaing/>
     <Switch>
     <Route path="/" exact component={Home} />
     <Route path="/action" exact component={Action} />
