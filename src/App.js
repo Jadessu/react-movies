@@ -2,6 +2,17 @@ import React from "react"
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom"
 import './App.css';
 import Navbar from "./components/Navbar"
+import Home from "./components/pages/Home"
+import Action from "./components/pages/Action"
+import Animation from "./components/pages/Animation"
+import Categories from "./components/pages/Categories"
+import Comedy from "./components/pages/Comedy"
+import Drama from "./components/pages/Drama"
+import Fantasy from "./components/pages/Fantasy"
+import Horror from "./components/pages/Horror"
+import Romance from "./components/pages/Romance"
+import TopRated from "./components/pages/TopRated"
+import Upcoming from "./components/pages/Upcoming"
 
 
 function App() {
