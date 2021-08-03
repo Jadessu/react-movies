@@ -1,31 +1,27 @@
-import React from "react";
-import { useEffect, useState } from "react";
-import Home from "../pages/Home"
+import React, {useState, useEffect} from "react"
+import Upcoming from "../pages/Upcoming"
 
-
-const NowPlaying = () => {
+const UpcomingMovies = () => {
     const API_KEY = process.env.REACT_APP_API_KEY
 
-    const [movies, setMovies] = useState([])
+    const [upcomingMovies, setUpcomingMovies] = useState([])
 
     useEffect(() => {
         getMovies()
     }, [])
 
     const getMovies = async () => {
-        const response = await fetch(
-            `https://api.themoviedb.org/3/movie/now_playing?api_key=${API_KEY}`
-        )
+        const response = await fetch(`https://api.themoviedb.org/3/movie/upcoming?api_key=${API_KEY}`)
         const data = await response.json()
-        setMovies(data.results)
-        
-        
+        setUpcomingMovies(data.results)
     }
+
+    
 
     return(
         <div className = "movie-container">
-            {movies.map((movie) => (
-                <Home
+            {upcomingMovies.map((movie) => (
+                <Upcoming
                 title={movie.title}
                 overview={movie.overview}
                 vote={movie.vote_average}
@@ -39,4 +35,4 @@ const NowPlaying = () => {
     )
 }
 
-export default NowPlaying
+export default UpcomingMovies

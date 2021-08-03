@@ -1,5 +1,6 @@
 import React from "react"
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom"
+import { useEffect, useState } from "react";
 import './App.css';
 import Navbar from "./components/Navbar"
 import Home from "./components/pages/Home"
@@ -13,18 +14,20 @@ import Horror from "./components/pages/Horror"
 import Romance from "./components/pages/Romance"
 import TopRated from "./components/pages/TopRated"
 import Upcoming from "./components/pages/Upcoming"
-import NowPlaing from "./components/fetches/NowPlaying"
-
+import NowPlaying from "./components/pages/NowPlaying"
 console.log(process.env.REACT_APP_API_KEY)
 
 function App() {
+  
   return (
+  
     
     <Router>
+      
     <Navbar />
-    <NowPlaing/>
+    <NowPlaying/>
     <Switch>
-    <Route path="/" exact component={Home} />
+    <Route path="/" exact component={Home}  />
     <Route path="/action" exact component={Action} />
     <Route path="/animation" exact component={Animation} />
     <Route path="/categories" exact component={Categories} />
@@ -35,10 +38,6 @@ function App() {
     <Route path="/romance" exact component={Romance} />
     <Route path="/toprated" exact component={TopRated} />
     <Route path="/upcoming" exact component={Upcoming} />
-
-
-
-
     </Switch>
     </Router>
   );
