@@ -6,7 +6,7 @@ export default function Upcoming(props){
     const IMG_API = "https://image.tmdb.org/t/p/w1280"
     return(
         <>
-        <h1 className = "Upcoming"> UPCOMING</h1>
+        
         <div className = "movie">
           
           <img className = "movie-img" src={IMG_API + props.image} alt={props.title}/>

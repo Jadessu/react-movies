@@ -13,9 +13,8 @@ import Fantasy from "./components/pages/Fantasy"
 import Horror from "./components/pages/Horror"
 import Romance from "./components/pages/Romance"
 import TopRated from "./components/pages/TopRated"
-import Upcoming from "./components/pages/Upcoming"
+import UpcomingFetch from "./components/pages/UpcomingFetch"
 import NowPlaying from "./components/pages/NowPlaying"
-console.log(process.env.REACT_APP_API_KEY)
 
 function App() {
   
@@ -25,9 +24,9 @@ function App() {
     <Router>
       
     <Navbar />
-    <NowPlaying/>
+    
     <Switch>
-    <Route path="/" exact component={Home}  />
+    <Route path="/" exact> <NowPlaying/> </Route>
     <Route path="/action" exact component={Action} />
     <Route path="/animation" exact component={Animation} />
     <Route path="/categories" exact component={Categories} />
@@ -37,7 +36,7 @@ function App() {
     <Route path="/horror" exact component={Horror} />
     <Route path="/romance" exact component={Romance} />
     <Route path="/toprated" exact component={TopRated} />
-    <Route path="/upcoming" exact component={Upcoming} />
+    <Route path="/upcoming" exact> <UpcomingFetch/> </Route>
     </Switch>
     </Router>
   );
