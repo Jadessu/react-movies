@@ -1,20 +1,22 @@
 import React from "react";
 import { useEffect, useState } from "react";
-import TopRated from "../pages/TopRated";
-const TopRatedFetch = () => {
+import Action from "./Action";
+const ActionFetch = () => {
     const API_KEY = process.env.REACT_APP_API_KEY
 
     const [movies, setMovies] = useState([])
 
     useEffect(() => {
-        getMovies()
+        getActionMovies()
     }, [])
 
-    const getMovies = async () => {
+    const getActionMovies = async () => {
         const response = await fetch(
-            `https://api.themoviedb.org/3/movie/top_rated?api_key=${API_KEY}`
+            `https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&with_genres=28`
         )
         const data = await response.json()
+        console.log(data)
+        console.log("hi")
         setMovies(data.results)
         
         
@@ -23,7 +25,7 @@ const TopRatedFetch = () => {
     return(
         <div className = "movie-container">
             {movies.map((movie) => (
-                <TopRated
+                <Action
                 title={movie.title}
                 overview={movie.overview}
                 vote={movie.vote_average}
@@ -38,4 +40,4 @@ const TopRatedFetch = () => {
     )
 }
 
-export default TopRatedFetch
+export default ActionFetch

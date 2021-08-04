@@ -16,6 +16,8 @@ import TopRated from "./components/pages/TopRated"
 import UpcomingFetch from "./components/pages/UpcomingFetch"
 import NowPlaying from "./components/pages/NowPlaying"
 import TopRatedFetch from "./components/pages/TopRatedFetch";
+import ActionFetch from "./components/pages/ActionFetch";
+
 function App() {
   
   return (
@@ -27,7 +29,7 @@ function App() {
     
     <Switch>
     <Route path="/" exact> <NowPlaying/> </Route>
-    <Route path="/action" exact component={Action} />
+    <Route path="/action" exact> <ActionFetch/> </Route>
     <Route path="/animation" exact component={Animation} />
     <Route path="/categories" exact component={Categories} />
     <Route path="/comedy" exact component={Comedy} />
