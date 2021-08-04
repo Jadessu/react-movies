@@ -15,7 +15,7 @@ import Romance from "./components/pages/Romance"
 import TopRated from "./components/pages/TopRated"
 import UpcomingFetch from "./components/pages/UpcomingFetch"
 import NowPlaying from "./components/pages/NowPlaying"
-
+import TopRatedFetch from "./components/pages/TopRatedFetch";
 function App() {
   
   return (
@@ -35,7 +35,7 @@ function App() {
     <Route path="/fantasy" exact component={Fantasy} />
     <Route path="/horror" exact component={Horror} />
     <Route path="/romance" exact component={Romance} />
-    <Route path="/toprated" exact component={TopRated} />
+    <Route path="/toprated" exact> <TopRatedFetch/> </Route> 
     <Route path="/upcoming" exact> <UpcomingFetch/> </Route>
     </Switch>
     </Router>
