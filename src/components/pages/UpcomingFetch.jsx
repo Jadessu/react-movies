@@ -2,6 +2,7 @@ import React from "react";
 import { useEffect, useState } from "react";
 import MovieCard from "./MovieCard";
 import "../css/styles.css"
+import BootstrapCarousel from "../../BootstrapCarousel";
 
 
 
@@ -20,6 +21,7 @@ const UpcomingFetch = () => {
         )
         const data = await response.json()
         setMovies(data.results)
+        console.log(data.results)
         
         
     }
@@ -37,9 +39,15 @@ const UpcomingFetch = () => {
                 releaseDate={movie.release_date}
                 id={movie.id}
                 />
+              
             ))}
-            
-
+        </div>
+        <div className = "carousel">
+            {movies.map((movie) => (
+                <BootstrapCarousel
+                posterimage={movie.backdrop_path}      
+                />
+            ))}
         </div>
         </>
     )
