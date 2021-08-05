@@ -1,6 +1,8 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import MovieCard from "./MovieCard";
+import "../css/styles.css"
+
 const TopRatedFetch = () => {
     const API_KEY = process.env.REACT_APP_API_KEY
 

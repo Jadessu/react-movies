@@ -17,6 +17,7 @@
   overflow: hidden;
 }
 
+
 .movie img{
   max-width: 100%;
 }
@@ -43,7 +44,7 @@
   position: absolute;
   bottom: 0;
   left: 0;
-  background: rgba( 121, 0, 0, 0.70 );
+  background: rgba(19, 0, 0, 0.945);
   box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
   backdrop-filter: blur( 20.0px );
   -webkit-backdrop-filter: blur( 20.0px );
@@ -63,7 +64,7 @@
 }
 
 span{
-  background-color: rgb(51, 2, 2);
+  background-color: rgb(13, 23, 163);
 }
 
 header{
@@ -72,4 +73,8 @@ header{
   padding: 1.2rem;
   justify-content: flex-end;
 
+}
+
+.page-title{
+  background-color: yellow;
 }

@@ -1,6 +1,7 @@
 import React from "react"
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom"
 import { useEffect, useState } from "react";
+import BootstrapCarousel from "./BootstrapCarousel";
 import './App.css';
 import Navbar from "./components/Navbar"
 import Categories from "./components/pages/Categories"
@@ -26,6 +27,7 @@ function App() {
     
     <Switch>
       <div className = "pages">
+        <BootstrapCarousel/>
     <Route path="/" exact> <NowPlaying/> </Route>
     <Route path="/action" exact> <ActionFetch/> </Route>
     <Route path="/animation" exact> <AnimationFetch/> </Route> 

@@ -1,6 +1,8 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import MovieCard from "./MovieCard";
+import "../css/styles.css"
+
 
 
 const UpcomingFetch = () => {
@@ -23,6 +25,8 @@ const UpcomingFetch = () => {
     }
 
     return(
+        <>
+        <h1 classname="page-title"> UPCOMING MOVIES</h1>
         <div className = "movie-container">
             {movies.map((movie) => (
                 <MovieCard
@@ -37,6 +41,7 @@ const UpcomingFetch = () => {
             
 
         </div>
+        </>
     )
 }
 
