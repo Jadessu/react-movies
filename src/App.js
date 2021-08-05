@@ -3,21 +3,17 @@ import {BrowserRouter as Router, Switch, Route} from "react-router-dom"
 import { useEffect, useState } from "react";
 import './App.css';
 import Navbar from "./components/Navbar"
-import Home from "./components/pages/Home"
-import Action from "./components/pages/Action"
-import Animation from "./components/pages/Animation"
 import Categories from "./components/pages/Categories"
 import Comedy from "./components/pages/Comedy"
 import Drama from "./components/pages/Drama"
 import Fantasy from "./components/pages/Fantasy"
 import Horror from "./components/pages/Horror"
 import Romance from "./components/pages/Romance"
-import TopRated from "./components/pages/TopRated"
-import UpcomingFetch from "./components/pages/UpcomingFetch"
 import NowPlaying from "./components/pages/NowPlaying"
 import TopRatedFetch from "./components/pages/TopRatedFetch";
 import ActionFetch from "./components/pages/ActionFetch";
 import AnimationFetch from "./components/pages/AnimationFetch";
+import UpcomingFetch from "./components/pages/UpcomingFetch";
 
 function App() {
   

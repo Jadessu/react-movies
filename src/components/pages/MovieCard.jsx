@@ -6,21 +6,19 @@ export default function MovieCard(props){
 
    
     return (
-        <>
-       
-        <div className = "movie">
-          
-          
-        <img className = "movie-img" src={IMG_API + props.image} alt={props.title}/>
-    <div className = "movie-info">
-          <h1>{props.title} </h1>
-          <p>{props.overview} </p>
-          <h2>{props.vote} </h2>
-          <h3>{props.releaseDate}</h3>
-          </div>
-    
-          </div>
-    
-          </>
+        <div className="movie">
+            <div>
+            <img src={IMG_API + props.image} 
+            alt = {props.title} />
+            </div>
+            <div className="movie-info">
+                <h3>{props.title}</h3>
+                <span>{props.vote}</span>
+            </div>
+            <div className="movie-overview">
+                <h2>Overview:</h2>
+               <p>{props.overview}</p>
+            </div>
+        </div>
       )
     }
