@@ -1,6 +1,6 @@
 import React from "react";
 import { useEffect, useState } from "react";
-import Upcoming from "./Upcoming";
+import MovieCard from "./MovieCard";
 
 
 const UpcomingFetch = () => {
@@ -25,7 +25,7 @@ const UpcomingFetch = () => {
     return(
         <div className = "movie-container">
             {movies.map((movie) => (
-                <Upcoming
+                <MovieCard
                 title={movie.title}
                 overview={movie.overview}
                 vote={movie.vote_average}

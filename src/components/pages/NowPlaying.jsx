@@ -1,6 +1,6 @@
 import React from "react";
 import { useEffect, useState } from "react";
-import Home from "./Home"
+import MovieCard from "./MovieCard";
 
 
 const NowPlaying = () => {
@@ -25,7 +25,7 @@ const NowPlaying = () => {
     return(
         <div className = "movie-container">
             {movies.map((movie) => (
-                <Home
+                <MovieCard
                 title={movie.title}
                 overview={movie.overview}
                 vote={movie.vote_average}

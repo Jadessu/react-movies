@@ -17,6 +17,7 @@ import UpcomingFetch from "./components/pages/UpcomingFetch"
 import NowPlaying from "./components/pages/NowPlaying"
 import TopRatedFetch from "./components/pages/TopRatedFetch";
 import ActionFetch from "./components/pages/ActionFetch";
+import AnimationFetch from "./components/pages/AnimationFetch";
 
 function App() {
   
@@ -28,9 +29,10 @@ function App() {
     <Navbar />
     
     <Switch>
+      <div className = "pages">
     <Route path="/" exact> <NowPlaying/> </Route>
     <Route path="/action" exact> <ActionFetch/> </Route>
-    <Route path="/animation" exact component={Animation} />
+    <Route path="/animation" exact> <AnimationFetch/> </Route> 
     <Route path="/categories" exact component={Categories} />
     <Route path="/comedy" exact component={Comedy} />
     <Route path="/drama" exact component={Drama} />
@@ -39,6 +41,7 @@ function App() {
     <Route path="/romance" exact component={Romance} />
     <Route path="/toprated" exact> <TopRatedFetch/> </Route> 
     <Route path="/upcoming" exact> <UpcomingFetch/> </Route>
+    </div>
     </Switch>
     </Router>
   );

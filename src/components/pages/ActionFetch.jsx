@@ -1,6 +1,6 @@
 import React from "react";
 import { useEffect, useState } from "react";
-import Action from "./Action";
+import MovieCard from "./MovieCard";
 const ActionFetch = () => {
     const API_KEY = process.env.REACT_APP_API_KEY
 
@@ -25,7 +25,7 @@ const ActionFetch = () => {
     return(
         <div className = "movie-container">
             {movies.map((movie) => (
-                <Action
+                <MovieCard
                 title={movie.title}
                 overview={movie.overview}
                 vote={movie.vote_average}

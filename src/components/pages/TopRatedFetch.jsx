@@ -1,6 +1,6 @@
 import React from "react";
 import { useEffect, useState } from "react";
-import TopRated from "../pages/TopRated";
+import MovieCard from "./MovieCard";
 const TopRatedFetch = () => {
     const API_KEY = process.env.REACT_APP_API_KEY
 
@@ -23,7 +23,7 @@ const TopRatedFetch = () => {
     return(
         <div className = "movie-container">
             {movies.map((movie) => (
-                <TopRated
+                <MovieCard
                 title={movie.title}
                 overview={movie.overview}
                 vote={movie.vote_average}
